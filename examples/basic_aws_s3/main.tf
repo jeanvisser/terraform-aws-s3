@@ -11,8 +11,9 @@ provider "aws" {
   region = "eu-west-1"
 }
 
-module "s3_storage" {
-  source = "jeanvisser/terraform-aws-s3"
+module "s3" {
+  source  = "jeanvisser/s3/aws"
+  version = "0.1.0"
 
   bucket_name = local.bucket_name
   tags        = local.tags
